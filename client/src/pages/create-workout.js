@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const CreateWorkout = () => {
   return (
-    <div className="">
+    <div className="create-workout">
       <Create />
     </div>
   );
@@ -20,7 +20,7 @@ const Create = () => {
   async function submit(e) {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/create", {
+      await axios.post("http://localhost:3001/create-workout/create", {
         title,
         sets,
         reps,
@@ -121,7 +121,13 @@ const Create = () => {
             }}
           />
           <br></br>
-          <button onClick={() => {}}>Create Now</button>
+          <button
+            onClick={() => {
+              alert("Create successfully");
+            }}
+          >
+            Create Now
+          </button>
         </form>
       </div>
     </>
