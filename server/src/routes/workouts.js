@@ -37,12 +37,9 @@ router.post("/create", async (req, res) => {
     targetMuscles,
   });
 
-  try {
-    const response = await newExercise.save();
-    res.json(response);
-  } catch (err) {
-    res.json(err);
-  }
+  workoutModel.insertMany({ newExercise });
+  await newExercise.save();
+  console.log(res.body);
 });
 
 export { router as workoutsRouter };

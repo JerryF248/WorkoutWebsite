@@ -24,14 +24,13 @@ const Login = (props) => {
     event.preventDefault();
 
     try {
-      const result = await axios.post("http://localhost:3001/auth/login", {
+      const result = await axios.post("http://localhost:3000/auth/login", {
         username,
         password,
       });
 
       setCookies("access_token", result.data.token);
       window.localStorage.setItem("userID", result.data.userID);
-      console.log(props.username);
       navigate("/");
     } catch (error) {
       console.error(error);
