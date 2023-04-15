@@ -151,3 +151,27 @@ p {
   border: 3px solid white;
   background-color: greenyellow;
 }
+
+.form {
+  justify-content: center;
+  border: 1px solid whitesmoke;
+  background-color: olive;
+}
+
+.form button {
+  width: 170px;
+  height: 44px;
+  margin-left: 150px;
+  background-color: white;
+  color: black;
+  border: none;
+  margin-top: 50px;
+  font-size: 25px;
+}
+.form input {
+  margin-left: 250px;
+}
+.form button:hover {
+  border: 3px solid white;
+  background-color: greenyellow;
+}
