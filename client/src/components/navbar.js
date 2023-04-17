@@ -14,15 +14,17 @@ export const NavBar = () => {
   };
 
   return (
-    <div className="navbar">
+    <div id="navbar">
       <Link to="/"> Home </Link>
-      <Link to="/create-workout"> Create Workout </Link>
-      <Link to="/saved-workouts"> Saved Workouts </Link>
       {!cookies.access_token ? (
         <Link to="/auth"> Login/Register </Link>
       ) : (
         <button onClick={logout}> Logout </button>
       )}
+      <Link to="/create-workout"> Create Workout </Link>
+      <Link to="/saved-workouts"> Saved Workouts </Link>
+      <Link to="/challenges"> Challenges </Link>
+      <Link to="/fitness-goals"> Fitness Goals </Link>
     </div>
   );
 };

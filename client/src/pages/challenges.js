@@ -1,3 +1,7 @@
+import React, { useState } from "react";
+import axios from "axios";
+// import "bootstrap/dist/css/bootstrap.min.css";
+
 export const Challenges = () =>{
     return (
     <div classname=""> 
@@ -7,6 +11,25 @@ export const Challenges = () =>{
 };
 
 const Create = () => {
+    const [name, setName] = useState("");
+    const [description, setDescription] = useState("");
+    const [completed, setCompleted] = useState("");
+  
+    async function submit(e) {
+      e.preventDefault();
+      try {
+        await axios.post("http://localhost:3001/challenges/create", {
+          name,
+          description,
+          completed,
+        });
+        alert("Create Challenge Builder");
+      }
+      catch (error) {
+        console.log(error);
+      }
+    }
+
     return (
             <div className="challenges-container">
             <div className="challenges">
@@ -27,22 +50,18 @@ const Create = () => {
                             <td>Participate in an average-intesity cardio-related excersize every day of a month.</td>
                             <td>Completed</td>
                         </tr>
-                        <tr className="table-secondary">
-                            <th>db.Name</th>
-                            <td>db.desc</td>
-                            <td>db.completed</td>
-                        </tr>
                     </tbody>
                 </table>
-                <form className="create-challenge">
+                <form className="create-challenge" onSubmit={submit}>
                     <h3 style={{color: "white"}}>Create a Personal Challenge</h3>
-                    <div clasName="form-group">
-                        <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Challenge Name"/>
+                    <br></br>
+                    <div className="form-group">
+                        <input type="text" className="form-control" id="name" value={name} placeholder="Challenge Name" onChange={(e) => { setName(e.target.value)} }/>
                     </div>
                     <div className="form-group">
-                        <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Challenge Description"/>
+                        <input type="text" className="form-control" id="description" value={description} onChange={(e)=>{setDescription(e.target.value)}} placeholder="Challenge Description"/>
                     </div>
-                    <button type="submit" className="btn btn-light">Create</button>
+                    <button type="submit" className="btn btn-light" value={false} onClick={(e)=>{setCompleted(e.target.value)}}>Create</button>
                 </form>
             </div>
         </div>
