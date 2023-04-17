@@ -25,21 +25,26 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/create", async (req, res) => {
-  const { title, sets, reps, level, equipment, targetMuscles } = req.body;
-  //const exercise = await workoutModel.findOne({ title });
+  res.send("Good");
 
-  const newExercise = new workoutModel({
-    title,
-    sets,
-    reps,
-    level,
-    equipment,
-    targetMuscles,
+  const { title, set, reps, level, equipment, targetMuscles } = req.body;
+  // //const exercise = await workoutModel.findOne({ title });
+  // console.log(req.body);
+  const exercise = new workoutModel({
+    title: title,
+    set: set,
+    reps: reps,
+    level: level,
+    equipment: equipment,
+    targetMuscles: targetMuscles,
   });
 
-  workoutModel.insertMany({ newExercise });
-  await newExercise.save();
-  console.log(res.body);
+  try {
+    await workoutModel.insertMany([exercise]);
+    await exercise.save();
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 export { router as workoutsRouter };
