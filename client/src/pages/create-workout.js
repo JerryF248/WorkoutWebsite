@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const CreateWorkout = () => {
   return (
-    <div className="">
+    <div className="create-workout">
       <Create />
     </div>
   );
@@ -11,7 +11,7 @@ export const CreateWorkout = () => {
 
 const Create = () => {
   const [title, setTitle] = useState("");
-  const [sets, SetSets] = useState("");
+  const [set, SetSets] = useState("");
   const [reps, setReps] = useState("");
   const [level, setLevel] = useState("");
   const [equipment, setEquipment] = useState("");
@@ -20,9 +20,9 @@ const Create = () => {
   async function submit(e) {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/create", {
+      await axios.post("http://localhost:3001/workouts/create", {
         title,
-        sets,
+        set,
         reps,
         level,
         equipment,
@@ -61,18 +61,33 @@ const Create = () => {
             onChange={(e) => {
               setTitle(e.target.value);
             }}
+            required
           />
           <br></br>
           <br></br>
-          <label htmlFor="sets">Sets </label>
-          <select name="sets" id="sets">
-            <option value="">--Please choose an option--</option>
-            <option value={sets}>10</option>
-            <option value={sets}>20</option>
-            <option value={sets}>30</option>
-            <option value={sets}>40</option>
-            <option value={sets}>50</option>
-            <option value={sets}>60</option>
+          <label htmlFor="set">Sets</label>
+          <select
+            type="text"
+            id="set"
+            value={set}
+            onChange={(e) => {
+              SetSets(e.target.value);
+            }}
+            style={{ width: "440px", height: "40px", color: "red" }}
+            required
+          >
+            <option style={{ width: "150px" }}>
+              --Please choose an option--
+            </option>
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+            <option>40</option>
+            <option>50</option>
+            <option>60</option>
+            <option>70</option>
+            <option>80</option>
+            <option>90</option>
           </select>
           <br></br>
           <br></br>
@@ -84,6 +99,7 @@ const Create = () => {
             onChange={(e) => {
               setReps(e.target.value);
             }}
+            required
           />
           <br></br>
           <br></br>
@@ -95,6 +111,7 @@ const Create = () => {
             onChange={(e) => {
               setLevel(e.target.value);
             }}
+            required
           />
           <br></br>
           <br></br>
@@ -107,6 +124,7 @@ const Create = () => {
             onChange={(e) => {
               setEquipment(e.target.value);
             }}
+            required
           />
           <br></br>
           <br></br>
@@ -119,9 +137,16 @@ const Create = () => {
             onChange={(e) => {
               setTargetMuscles(e.target.value);
             }}
+            required
           />
           <br></br>
-          <button onClick={() => {}}>Create Now</button>
+          <button
+            onChange={(e) => {
+              submit(e);
+            }}
+          >
+            Create Now
+          </button>
         </form>
       </div>
     </>

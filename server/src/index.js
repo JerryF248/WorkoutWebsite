@@ -15,8 +15,15 @@ app.use("/auth", userRouter);
 app.use("/workouts", workoutsRouter);
 app.use("/challenges", challengesRouter);
 
-mongoose.connect(
-  "mongodb+srv://TJK:Workout@489cluster.66qgkdl.mongodb.net/489Cluster?retryWrites=true&w=majority"
-);
+mongoose
+  .connect(
+    "mongodb+srv://TJK:Workout@489cluster.66qgkdl.mongodb.net/489Cluster?retryWrites=true&w=majority"
+  )
+  .then(() => {
+    console.log("mongodb connected");
+  })
+  .catch(() => {
+    console.log("Error");
+  });
 
 app.listen(3001, () => console.log(`Server started`));
