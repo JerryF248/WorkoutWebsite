@@ -25,8 +25,6 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/create", async (req, res) => {
-  res.send("Good");
-
   const { title, set, reps, level, equipment, targetMuscles } = req.body;
   // //const exercise = await workoutModel.findOne({ title });
   // console.log(req.body);
@@ -41,8 +39,12 @@ router.post("/create", async (req, res) => {
 
   try {
     await workoutModel.insertMany([exercise]);
+
+    const allData = await workoutModel.find({});
     await exercise.save();
+    res.json(exercise);
   } catch (e) {
+    res.json("fail");
     console.log(e);
   }
 });

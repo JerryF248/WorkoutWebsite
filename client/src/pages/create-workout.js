@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+import App from "../App";
 
-export const CreateWorkout = () => {
+export const CreateWorkout = (props) => {
   return (
     <div className="create-workout">
       <Create />
@@ -9,7 +10,7 @@ export const CreateWorkout = () => {
   );
 };
 
-const Create = () => {
+const Create = (props) => {
   const [title, setTitle] = useState("");
   const [set, SetSets] = useState("");
   const [reps, setReps] = useState("");
@@ -57,7 +58,7 @@ const Create = () => {
           <input
             id="title"
             type="text"
-            value={title}
+            value={props.title}
             onChange={(e) => {
               setTitle(e.target.value);
             }}

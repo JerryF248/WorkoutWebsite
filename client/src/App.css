@@ -175,3 +175,25 @@ p {
   border: 3px solid white;
   background-color: greenyellow;
 }
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+.card {
+  width: 33.3%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.card h2 {
+  text-transform: uppercase;
+}
+
+:root {
+  --primary-color: #d63031;
+  --secondary-color: #636e72;
+  --font: "Poppins", sans-serif;
+}
