@@ -39,12 +39,8 @@ router.post("/create", async (req, res) => {
 
   try {
     await workoutModel.insertMany([exercise]);
-
-    const allData = await workoutModel.find({});
     await exercise.save();
-    res.json(exercise);
   } catch (e) {
-    res.json("fail");
     console.log(e);
   }
 });

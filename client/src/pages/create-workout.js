@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import App from "../App";
+import { Navigate, useNavigate } from "react-router-dom";
 
-export const CreateWorkout = (props) => {
+export const CreateWorkout = () => {
   return (
     <div className="create-workout">
       <Create />
@@ -29,7 +30,6 @@ const Create = (props) => {
         equipment,
         targetMuscles,
       });
-      alert("Create Workout Builder");
     } catch (e) {
       console.log(e);
     }
@@ -144,6 +144,9 @@ const Create = (props) => {
           <button
             onChange={(e) => {
               submit(e);
+            }}
+            onClick={() => {
+              alert("Workout Builder Created...");
             }}
           >
             Create Now
