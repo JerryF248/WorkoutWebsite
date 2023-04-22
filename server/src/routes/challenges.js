@@ -24,13 +24,19 @@ router.post("/", async (req, res) => {
 
 router.post("/create", async (req, res) => {
   const { name, description, completed } = req.body;
-  await ChallengeModel.insertMany([
-    {
-      name: name,
+  const challenge = new ChallengeModel({
+    name: name,
       description: description,
       completed: completed,
-    },
-  ]);
+  });
+
+  try {
+    await ChallengeModel.insertMany([challenge])
+    await challenge.save()
+  } 
+  catch (error) {
+    console.log(error)
+  }
 });
 
 export { router as challengesRouter };

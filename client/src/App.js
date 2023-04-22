@@ -4,6 +4,7 @@ import { Home } from "./pages/home";
 import { CreateWorkout } from "./pages/create-workout";
 import { SavedWorkouts } from "./pages/saved-workouts";
 import { Auth } from "./pages/auth";
+import { Challenges } from "./pages/challenges";
 import { FitnessGoals } from "./pages/fitness-goals";
 import { NavBar } from "./components/navbar";
 import { useState } from "react";
@@ -23,6 +24,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/create-workout" element={<CreateWorkout />} />
+          <Route path="/saved-workouts" element={<SavedWorkouts />} />
+          <Route path="/challenges" element={<Challenges />} />
           <Route path="/fitness-goals" element={<FitnessGoals />} />
           <Route
             path="/saved-workouts"
