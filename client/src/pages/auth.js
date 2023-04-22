@@ -86,6 +86,7 @@ const Register = () => {
       });
       alert("Registration Completed! Now login.");
     } catch (error) {
+      alert("User already exists!");
       console.error(error);
     }
   };
