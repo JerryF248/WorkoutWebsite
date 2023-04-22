@@ -25,8 +25,6 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/create", async (req, res) => {
-  res.send("Good");
-
   const { title, set, reps, level, equipment, targetMuscles } = req.body;
   // //const exercise = await workoutModel.findOne({ title });
   // console.log(req.body);

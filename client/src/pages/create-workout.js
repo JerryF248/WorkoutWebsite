@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import App from "../App";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export const CreateWorkout = () => {
   return (
@@ -9,7 +11,7 @@ export const CreateWorkout = () => {
   );
 };
 
-const Create = () => {
+const Create = (props) => {
   const [title, setTitle] = useState("");
   const [set, SetSets] = useState("");
   const [reps, setReps] = useState("");
@@ -28,7 +30,6 @@ const Create = () => {
         equipment,
         targetMuscles,
       });
-      alert("Create Workout Builder");
     } catch (e) {
       console.log(e);
     }
@@ -57,7 +58,7 @@ const Create = () => {
           <input
             id="title"
             type="text"
-            value={title}
+            value={props.title}
             onChange={(e) => {
               setTitle(e.target.value);
             }}
@@ -143,6 +144,9 @@ const Create = () => {
           <button
             onChange={(e) => {
               submit(e);
+            }}
+            onClick={() => {
+              alert("Workout Builder Created...");
             }}
           >
             Create Now

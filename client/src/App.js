@@ -5,8 +5,15 @@ import { CreateWorkout } from "./pages/create-workout";
 import { SavedWorkouts } from "./pages/saved-workouts";
 import { Auth } from "./pages/auth";
 import { NavBar } from "./components/navbar";
+import { useState } from "react";
 
 function App() {
+  const [title, setTitle] = useState("");
+  const [set, SetSets] = useState("");
+  const [reps, setReps] = useState("");
+  const [level, setLevel] = useState("");
+  const [equipment, setEquipment] = useState("");
+  const [targetMuscles, setTargetMuscles] = useState("");
   return (
     <div className="App">
       <Router>
@@ -15,7 +22,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/create-workout" element={<CreateWorkout />} />
-          <Route path="/saved-workouts" element={<SavedWorkouts />} />
+          <Route
+            path="/saved-workouts"
+            element={<SavedWorkouts title={title} />}
+          />
         </Routes>
       </Router>
     </div>
