@@ -9,7 +9,7 @@ export const NavBar = () => {
   const logout = () => {
     setCookies("access_token", "");
     window.localStorage.removeItem("userID");
-    alert("Successfully Log out");
+    alert("Successfully Logged Out");
     navigate("/auth");
   };
 
@@ -18,6 +18,7 @@ export const NavBar = () => {
       <Link to="/"> Home </Link>
       <Link to="/create-workout"> Create Workout </Link>
       <Link to="/saved-workouts"> Saved Workouts </Link>
+      <Link to="/fitness-goals"> Fitness Goals </Link>
       {!cookies.access_token ? (
         <Link to="/auth"> Login/Register </Link>
       ) : (
