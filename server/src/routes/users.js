@@ -42,19 +42,5 @@ router.post("/login", async (req, res) => {
   res.json({ token, userID: user._id });
 });
 
-router.post("/create", async (req, res) => {
-  const { title, sets, reps, level, equipment, targetMuscles } = req.body;
-  //const exercise = await workoutModel.findOne({ title });
-  await workoutModel.insertMany([
-    {
-      title: title,
-      sets: sets,
-      reps: reps,
-      level: level,
-      equipment: equipment,
-      targetMuscles: targetMuscles,
-    },
-  ]);
-});
 
 export { router as userRouter };

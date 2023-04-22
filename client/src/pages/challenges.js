@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
-export const Challenges = () =>{
-    return (
-    <div classname=""> 
-        <Create />
+export const Challenges = () => {
+  return (
+    <div classname="">
+      <Create />
     </div>
-    );
+  );
 };
 
 const Create = () => {

@@ -31,7 +31,6 @@ const Login = (props) => {
 
       setCookies("access_token", result.data.token);
       window.localStorage.setItem("userID", result.data.userID);
-      console.log(props.username);
       navigate("/");
     } catch (error) {
       console.error(error);

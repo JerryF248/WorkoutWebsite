@@ -7,8 +7,15 @@ import { Auth } from "./pages/auth";
 import { Challenges } from "./pages/challenges";
 import { FitnessGoals } from "./pages/fitness-goals";
 import { NavBar } from "./components/navbar";
+import { useState } from "react";
 
 function App() {
+  const [title, setTitle] = useState("");
+  const [set, SetSets] = useState("");
+  const [reps, setReps] = useState("");
+  const [level, setLevel] = useState("");
+  const [equipment, setEquipment] = useState("");
+  const [targetMuscles, setTargetMuscles] = useState("");
   return (
     <div className="App">
       <Router>
@@ -20,6 +27,10 @@ function App() {
           <Route path="/saved-workouts" element={<SavedWorkouts />} />
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/fitness-goals" element={<FitnessGoals />} />
+          <Route
+            path="/saved-workouts"
+            element={<SavedWorkouts title={title} />}
+          />
         </Routes>
       </Router>
     </div>

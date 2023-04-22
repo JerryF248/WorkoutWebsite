@@ -15,7 +15,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("/images/bg.jpg");
+  background-image: url("images/bg.jpg");
   background-size: 100%;
   color: white;
 }
@@ -80,22 +80,7 @@ a {
   font-size: 25px;
 }
 
-.create-recipe {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  width: 400px;
-}
-.create-recipe form {
-  display: flex;
-  flex-direction: column;
-}
+
 ul {
   list-style: none;
   padding: 0;
@@ -113,13 +98,12 @@ h2 {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
 }
 
-img {
-  width: 400px;
+.img-resize{
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
 }
 
 p {
@@ -236,3 +220,37 @@ mark.yellow {
   background-color: darkgrey;
 }
 
+=======
+.row {
+  display: flex;
+  justify-content: center;
+}
+.card {
+  width: 33.3%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.fitnessCard{
+  height: 30rem;
+  width: 25rem;
+  margin-right: 2rem;
+}
+.card h2 {
+  text-transform: uppercase;
+}
+
+:root {
+  --primary-color: #d63031;
+  --secondary-color: #636e72;
+  --font: "Poppins", sans-serif;
+}
+
+.fitnessContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
