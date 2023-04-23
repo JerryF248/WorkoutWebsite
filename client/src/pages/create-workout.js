@@ -22,7 +22,7 @@ const Create = (props) => {
   async function submit(e) {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/workouts/create", {
+      const workout = await axios.post("http://localhost:3001/workouts", {
         title,
         set,
         reps,
@@ -30,9 +30,17 @@ const Create = (props) => {
         equipment,
         targetMuscles,
       });
+
     } catch (e) {
       console.log(e);
     }
+    try{
+      await axios.put("http://localhost:3001/workouts", {
+
+      });
+    } catch (error) {
+        console.log(error)
+      }
   }
 
   return (

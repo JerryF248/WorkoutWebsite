@@ -39,6 +39,8 @@ const Create = () => {
   //     });
   // }, []);
 
+
+
   useEffect(() => {
     fetch("http://localhost:3001/workouts")
       .then((res) => {
@@ -53,13 +55,14 @@ const Create = () => {
           data.forEach((u, index) => {
             index++;
             temp += "<tr>";
-            temp += "<td>" + index + "</td>";
+            temp += `<td><button onClick = "{()=> saveWorkout(`+ u.title +`)}"> Save ${index} </button> </td>`;
             temp += "<td>" + u.title + "</td>";
             temp += "<td>" + u.set + "</td>";
             temp += "<td>" + u.reps + "</td>";
             temp += "<td>" + u.level + "</td>";
             temp += "<td>" + u.equipment + "</td>";
             temp += "<td>" + u.targetMuscles + "</td>";
+            temp += "</tr>"
           });
 
           document.getElementById("data").innerHTML = temp;

@@ -16,15 +16,13 @@ export const NavBar = () => {
   return (
     <div id="navbar">
       <Link to="/"> Home </Link>
-      {!cookies.access_token ? (
-        <Link to="/auth"> Login/Register </Link>
-      ) : (
-        <button onClick={logout}> Logout </button>
-      )}
+      {!cookies.access_token && <Link to="/auth"> Login/Register </Link>}
       <Link to="/create-workout"> Create Workout </Link>
-      <Link to="/saved-workouts"> Saved Workouts </Link>
+      <Link to="/saved-workouts"> Available Workouts </Link>
+      {cookies.access_token && <Link to="/my-workouts"> My Workouts </Link>}
       <Link to="/challenges"> Challenges </Link>
       <Link to="/fitness-goals"> Fitness Goals </Link>
+      {cookies.access_token && <button onClick={logout}> Logout </button>}
     </div>
   );
 };
