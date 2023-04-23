@@ -7,8 +7,8 @@ export const Home = () => {
   const navigate = useNavigate();
   return (
     <div class="text">
-      <h1>FITNESS CLUB.</h1>
-      <p>
+      <h1 style={{ color: "Red" }}>FITNESS CLUB.</h1>
+      <p style={{ color: "whitesmoke" }}>
         If you want something you've never had, you must be willing to do
         something you've never done
       </p>
