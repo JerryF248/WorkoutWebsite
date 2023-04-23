@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import swal from 'sweetalert';
-//swal("Success", "Challenge Created!", "success")
 
 
-export const Challenges = (props) => {
+export const Challenges = () => {
   return (
     <div classname="">
       <Create />
@@ -23,6 +22,21 @@ const Create = (props) => {
       e.preventDefault();
       try {
         await axios.post("http://localhost:3001/challenges/create", {
+          name,
+          description,
+          completed,
+        });
+        alert("Create Challenge Builder");
+      }
+      catch (error) {
+        console.log(error);
+      }
+    }
+
+    async function submit2(e) {
+      e.preventDefault();
+      try {
+        await axios.put("http://localhost:3001/challenges/update", {
           name,
           description,
           completed,
@@ -60,11 +74,13 @@ const Create = (props) => {
                         <tr className="table-secondary">
                             <th>{challenge.name}</th>
                             <td>{challenge.description}</td>
-                              <td>
-                                  {
-                                    challenge.completed ? <button disabled type="button" class="btn btn-outline-success">Completed</button> : <button type="button" class="btn btn-outline-danger" onClick={()=>{swal("Success", "Challenge Completed!", "success"); setTimeout(() => window.location.reload(), 800)}}>Not Completed</button>
-                                  }
-                              </td>
+                            <td>
+                              <form onSubmit={submit2}>
+                              {
+                                    challenge.completed ? <button disabled type="submit" class="btn btn-outline-success">Completed</button> : <button type="submit" class="btn btn-outline-danger" onClick={()=>{swal("Success", "Challenge Completed!", "success"); setTimeout(() => window.location.reload(), 800)}}>Not Completed</button>
+                              }
+                              </form>
+                            </td>
                         </tr>
                     ))}
                     </tbody>
@@ -78,7 +94,7 @@ const Create = (props) => {
                     <div className="form-group">
                         <input type="text" className="form-control" id="description" value={props.description} onChange={(e)=>{setDescription(e.target.value)}} placeholder="Challenge Description" required/>
                     </div>
-                    <button type="submit" className="btn btn-light" value={false} onClick={(e)=>{setCompleted(e.target.value); setTimeout(() => window.location.reload(), 800);}}>Create</button>
+                    <button type="submit" className="btn btn-light" value={true} onClick={(e)=>{setCompleted(e.target.value); setTimeout(() => window.location.reload(), 800);}}>Create</button>
                 </form>
             </div>
         </div>
