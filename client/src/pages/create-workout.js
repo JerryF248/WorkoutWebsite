@@ -37,9 +37,9 @@ const Create = (props) => {
 
   return (
     <>
-      <h1>Workout Builder/Generator</h1>
+      <h1 style={{ color: "whitesmoke" }}>Workout Builder/Generator</h1>
       <br></br>
-      <p>
+      <p style={{ color: "greenyellow", fontFamily: "fantasy" }}>
         This workout builder lets you generate or build a workout plan tailored
         to your (or your clients*) goals, preferences, schedule, and available
         equipment. Just fill out the settings and then pick a workout routine
