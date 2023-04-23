@@ -47,6 +47,23 @@ const Create = () => {
       .then((data) => {
         console.log(data);
         setData([...data]);
+        if (data.length > 0) {
+          var temp = "";
+
+          data.forEach((u, index) => {
+            index++;
+            temp += "<tr>";
+            temp += "<td>" + index + "</td>";
+            temp += "<td>" + u.title + "</td>";
+            temp += "<td>" + u.set + "</td>";
+            temp += "<td>" + u.reps + "</td>";
+            temp += "<td>" + u.level + "</td>";
+            temp += "<td>" + u.equipment + "</td>";
+            temp += "<td>" + u.targetMuscles + "</td>";
+          });
+
+          document.getElementById("data").innerHTML = temp;
+        }
       });
   }, []);
 
@@ -62,8 +79,23 @@ const Create = () => {
 
   return (
     <>
-      <div className="create-workout">
-        <div>
+      <div class="container">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Number</th>
+              <th scope="col">Title</th>
+              <th scope="col">Sets</th>
+              <th scope="col">Reps</th>
+              <th scope="col">Level</th>
+              <th scope="col">Equipment</th>
+              <th scope="col">TargetMuscle</th>
+            </tr>
+          </thead>
+          <tbody id="data"></tbody>
+        </table>
+
+        {/* <div>
           {data2 &&
             data2.map((data, index) => (
               <h3>
@@ -82,8 +114,8 @@ const Create = () => {
                 <br></br>
                 targetMuscle: {data.targetMuscles}
               </h3>
-            ))}
-        </div>
+            ))} */}
+        {/* </div> */}
       </div>
     </>
   );
