@@ -39,4 +39,17 @@ router.post("/create", async (req, res) => {
   }
 });
 
+// for update
+router.put("/update/:id", function (req, res) {
+  ChallengeModel.findById(req.params.id)
+  .then(challenge => {
+    challenge.completed = true;
+
+    challenge.save()
+    .then(()=>res.json("UPDATED"))
+    .catch((err)=>res.status(400).json(`Error: ${err}`));
+  })
+  .catch(err => res.status(400).json(`Error: ${err}`))
+});
+
 export { router as challengesRouter };
