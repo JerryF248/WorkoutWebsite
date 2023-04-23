@@ -206,9 +206,13 @@ p {
   font-size: 20px;
 }
 
-mark.yellow {
-  color: darkgoldenrod;
-  background: none;
+.challenges a {
+  text-decoration: none;
+  color: black;
+}
+
+.challenges a:hover {
+  color: green;
 }
 
 .create-challenge {
@@ -220,7 +224,6 @@ mark.yellow {
   background-color: darkgrey;
 }
 
-=======
 .row {
   display: flex;
   justify-content: center;
@@ -253,4 +256,65 @@ mark.yellow {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.column2 {
+  float: left;
+  width: 33.33%;
+  background-color: gray;
+  border-style: solid;
+  border-color: black;
+  height: 750px;
+}
+
+.row2 {
+  width: 1200px;
+  height: 100%;
+  background-color: gray;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.fitness-goals h1 {
+  font-size: 100px;
+  margin-top: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: monospace;
+  color: lightgrey
+}
+
+.fg-title {
+  text-align: center;
+  color: lightgrey;
+  font-family: monospace;
+  padding-top: 20px;
+}
+
+.fitness-goals h3 {
+  padding-top: 20px;
+  font-size: 20px;
+  color: lightgrey;
+  text-align: center;
+}
+
+.fitnessimg {
+  padding-top: 20px;
+  height: 400px;
+  width: 375px;
+}
+
+.fg-desc {
+  font-size: 500px;
+  text-align: center;
+  color: lightgrey;
+  font-family: monospace;
+  padding: 10px;
 }

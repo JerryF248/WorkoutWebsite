@@ -39,4 +39,18 @@ router.post("/create", async (req, res) => {
   }
 });
 
+// for update
+router.post("/update/:id", function (req, res) {
+  ChallengeModel.findByIdAndUpdate(req.params.id,
+  { completed: req.body.completed }, function (err, data) {
+    if (err) {
+      console.log(err)
+    }
+    else {
+      res.send(data)
+      console.log("data updated")
+    }
+  })
+})
+
 export { router as challengesRouter };

@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "mongoose": "^7.0.3"
+    "mongoose": "^7.0.3",
+    "sweetalert": "^2.1.2"
   }
 }
