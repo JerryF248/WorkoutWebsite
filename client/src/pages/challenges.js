@@ -33,20 +33,21 @@ const Create = (props) => {
       }
     }
 
-    async function submit2(e) {
-      e.preventDefault();
-      try {
-        await axios.put("http://localhost:3001/challenges/update", {
-          name,
-          description,
-          completed,
-        });
-        alert("Create Challenge Builder");
-      }
-      catch (error) {
-        console.log(error);
-      }
-    }
+    // template attempt for updating
+    // async function submit2(e) {
+    //   e.preventDefault();
+    //   try {
+    //     await axios.put("http://localhost:3001/challenges/update", {
+    //       name,
+    //       description,
+    //       completed,
+    //     });
+    //     alert("Create Challenge Builder");
+    //   }
+    //   catch (error) {
+    //     console.log(error);
+    //   }
+    // }
 
     useEffect(() => {
       fetch("http://localhost:3001/challenges")
