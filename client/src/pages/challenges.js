@@ -3,7 +3,6 @@ import axios from "axios";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import swal from 'sweetalert';
 
-
 export const Challenges = () => {
   return (
     <div classname="">
@@ -17,7 +16,7 @@ const Create = (props) => {
     const [description, setDescription] = useState("");
     const [completed, setCompleted] = useState(false);
     const [challenges, setChallenge] = useState([]);
-  
+
     async function submit(e) {
       e.preventDefault();
       try {
@@ -36,7 +35,7 @@ const Create = (props) => {
     async function submit2(e) {
       e.preventDefault();
       try {
-        await axios.put("http://localhost:3001/challenges/update", {
+        await axios.put(`http://localhost:3001/challenges/update/${props.match.params.id}`, {
           name,
           description,
           completed,
