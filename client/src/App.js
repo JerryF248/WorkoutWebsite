@@ -28,7 +28,7 @@ function App() {
           <Route path="/saved-workouts" element={<SavedWorkouts />} />
           <Route path="/challenges" element={<Challenges />} />
           <Route path="/fitness-goals" element={<FitnessGoals />} />
-          <Route path="/saved-workouts" element={<SavedWorkouts title={title} />}
+          <Route path="/my-workouts" element={<MyWorkouts />}
           />
         </Routes>
       </Router>
