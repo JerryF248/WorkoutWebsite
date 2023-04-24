@@ -69,7 +69,7 @@ input {
 }
 
 #navbar a {
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
@@ -79,7 +79,6 @@ a {
   margin: 10px;
   font-size: 25px;
 }
-
 
 ul {
   list-style: none;
@@ -100,7 +99,7 @@ h2 {
 img {
 }
 
-.img-resize{
+.img-resize {
   height: 100%;
   width: 100%;
   object-fit: fill;
@@ -145,6 +144,13 @@ p {
   background-color: olive;
 }
 
+.form2 {
+  justify-content: center;
+  border: 1px solid whitesmoke;
+  background-image: url("images/bg2.jpg");
+  background-size: 100%;
+}
+
 .form button {
   width: 170px;
   height: 44px;
@@ -183,7 +189,8 @@ p {
   height: 100%;
   color: black;
   text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .challenges-container {
@@ -199,7 +206,8 @@ p {
   height: 100%;
   color: black;
   text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .challenges h1 {
@@ -250,8 +258,8 @@ p {
   flex-direction: column;
   align-items: center;
 }
-.fitnessCard{
-  margin-top: 2vw;;
+.fitnessCard {
+  margin-top: 2vw;
   height: 30rem;
   width: 25rem;
   margin-right: 2rem;
@@ -266,7 +274,7 @@ p {
   --font: "Poppins", sans-serif;
 }
 
-.fitnessContainer{
+.fitnessContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -303,7 +311,7 @@ p {
   text-align: center;
   padding-bottom: 10px;
   font-family: monospace;
-  color: lightgrey
+  color: lightgrey;
 }
 
 .fg-title {
