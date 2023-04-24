@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
   const navigate = useNavigate();
+  const [cookies, setCookies] = useCookies(["access_token"]);
   return (
     <div class="text">
       <h1 style={{ color: "Red" }}>FITNESS CLUB.</h1>
@@ -12,13 +13,7 @@ export const Home = () => {
         If you want something you've never had, you must be willing to do
         something you've never done
       </p>
-      <button
-        onClick={() => {
-          navigate("/create-workout");
-        }}
-      >
-        Join Now
-      </button>
+      {!cookies.access_token && (<button onClick={() => {{navigate("/auth");}}}> Join Now</button>)}
       <br></br>
       <br></br>
       <br></br>
