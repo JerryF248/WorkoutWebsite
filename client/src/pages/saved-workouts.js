@@ -19,6 +19,7 @@ const Create = () => {
   const [equipment, setEquipment] = useState("");
   const [targetMuscles, setTargetMuscles] = useState("");
   const [data2, setData] = useState([]);
+  const [title2, setTitle2] = useState(false);
 
   state = {
     posts: [],
@@ -39,8 +40,6 @@ const Create = () => {
   //     });
   // }, []);
 
-
-
   useEffect(() => {
     fetch("http://localhost:3001/workouts")
       .then((res) => {
@@ -55,14 +54,17 @@ const Create = () => {
           data.forEach((u, index) => {
             index++;
             temp += "<tr>";
-            temp += `<td><button onClick = "{()=> saveWorkout(`+ u.title +`)}"> Save ${index} </button> </td>`;
+            temp +=
+              `<td><button onClick = "{()=> saveWorkout(` +
+              u.title +
+              `)}"> Save ${index} </button> </td>`;
             temp += "<td>" + u.title + "</td>";
             temp += "<td>" + u.set + "</td>";
             temp += "<td>" + u.reps + "</td>";
             temp += "<td>" + u.level + "</td>";
             temp += "<td>" + u.equipment + "</td>";
             temp += "<td>" + u.targetMuscles + "</td>";
-            temp += "</tr>"
+            temp += "</tr>";
           });
 
           document.getElementById("data").innerHTML = temp;
@@ -83,7 +85,7 @@ const Create = () => {
   return (
     <>
       <div class="container">
-        <table class="table table-dark">
+        <table class="table table-bordered table-dark">
           <thead>
             <tr>
               <th scope="col">Number</th>
