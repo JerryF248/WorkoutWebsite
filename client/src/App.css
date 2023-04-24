@@ -257,6 +257,7 @@ p {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: grey;
 }
 .fitnessCard {
   margin-top: 2vw;

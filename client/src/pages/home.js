@@ -25,22 +25,19 @@ export const Home = () => {
         <div class="card" style={{ color: "gray" }}>
           <h2>Progression</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod
+            Monitor your progess with challenges.
           </p>
         </div>
-        <div class="card">
+        <div class="card" style={{ color: "gray" }}>
           <h2>Workout</h2>
-          <p style={{ color: "red" }}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod
+          <p>
+            Create custom workouts to fit your needs or choose from premade/available ones.
           </p>
         </div>
-        <div class="card">
-          <h2>Nutrition</h2>
+        <div class="card" style={{ color: "gray" }}>
+          <h2>Insight</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod
+            Find the right fitness goals and workouts that cater to each user's preferences/goals.
           </p>
         </div>
       </div>
