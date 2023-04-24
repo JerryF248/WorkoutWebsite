@@ -39,7 +39,7 @@ const Login = (props) => {
 
   return (
     <div className="auth-container">
-      <h3 style={{ color: "gold" }}>Welcome {username} user</h3>
+      <h3 style={{ color: "gold" }}>Welcome {username}</h3>
       <form onSubmit={handleSubmit}>
         <h2 style={{ color: "black" }}>Login</h2>
         <div className="form-group">
