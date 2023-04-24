@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "6444a13bdd18583010b225dd"
+  },
+  "name": "Bench Your Own Body Weight",
+  "description": "Bench press the amount that you weigh one time.",
+  "completed": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6444a14cdd18583010b225e2"
+  },
+  "name": "Deadlift 2x Your Own Body Weight",
+  "description": "Deadlift double the amount that you weigh one time.",
+  "completed": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6444a168dd18583010b225e7"
+  },
+  "name": "Squat 2x Your Own Body Weight",
+  "description": "Squat double the amount that you weigh one time.",
+  "completed": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6444a17ddd18583010b225ec"
+  },
+  "name": "30-Day Cardio Challenge",
+  "description": "Participate in a cardio-related activity once a day for a month.",
+  "completed": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6444a1a1dd18583010b225f1"
+  },
+  "name": " 30-Day Yoga Challenge",
+  "description": "Participate in a yoga-related activity once a day for a month.",
+  "completed": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6444a1c2dd18583010b225f6"
+  },
+  "name": " 30-Day Push Up Challenge",
+  "description": "Perform the maximum amount of pushups you can do in one sitting, for a month.",
+  "completed": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6444a1fcdd18583010b225fc"
+  },
+  "name": " 30-Day Core Challenge",
+  "description": "Perform and complete a core-related exercise once a day for a month.",
+  "completed": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6444b1d0c67ec576a063a7c9"
+  },
+  "name": "My Get In Shape Challenge",
+  "description": "Lift every other day, eat healthy, run on the days I don't lift. For a 3-week duration.",
+  "completed": true,
+  "__v": 0
+}]

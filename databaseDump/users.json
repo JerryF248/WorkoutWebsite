@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "6444c5af06625a16f0e22fc7"
+  },
+  "username": "jerry",
+  "password": "$2b$10$Sjh7Is8TkhzLouu/Pq1qhOwXOIaAJ0tQMlHytmDsV8/DEuB0vezqW",
+  "exercises": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6445d821d8798a6edd5011ac"
+  },
+  "username": "report",
+  "password": "$2b$10$JGLRxBts4j3rC.p5nAI8Rud24tVdFCT0pF0ygtU1O3N3D2wYROgpC",
+  "exercises": [],
+  "__v": 0
+}]

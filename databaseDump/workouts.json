@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "643b8bcfc71449c0ea367167"
+  },
+  "title": "Fab & Fit & Fun",
+  "set": "40",
+  "reps": "Low reps",
+  "level": "High",
+  "equipment": "Dumbbell",
+  "targetMuscles": "Upper back",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643b8cc910d9277d6b03c234"
+  },
+  "title": "Fab & Fit & Fun",
+  "set": "70",
+  "reps": "Low reps",
+  "level": "High",
+  "equipment": "Dumbbell",
+  "targetMuscles": "Upper back",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643b8d9dd2b2f345cb987d1c"
+  },
+  "title": "Fab & Fit & Fun",
+  "set": "90",
+  "reps": "Low reps",
+  "level": "High",
+  "equipment": "Dumbbell",
+  "targetMuscles": "Upper back",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643e2226cf63f5ec8e6285ab"
+  },
+  "title": "Butt lift",
+  "set": "50",
+  "reps": "20",
+  "level": "High",
+  "equipment": "Dumbbell",
+  "targetMuscles": "Glutes",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "643e223ecf63f5ec8e6285af"
+  },
+  "title": "Butt lift",
+  "set": "50",
+  "reps": "20",
+  "level": "High",
+  "equipment": "Dumbbell",
+  "targetMuscles": "Glutes",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6444cb4a755a0e9cced10a3d"
+  },
+  "title": "Butt lift",
+  "set": "30",
+  "reps": "20",
+  "level": "High",
+  "equipment": "Dumbbell",
+  "targetMuscles": "Glutes",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6444cc2ad3e8948b87e5e580"
+  },
+  "title": "Butt lift",
+  "set": "30",
+  "reps": "20",
+  "level": "High",
+  "equipment": "Dumbbell",
+  "targetMuscles": "Glutes",
+  "__v": 0
+}]
