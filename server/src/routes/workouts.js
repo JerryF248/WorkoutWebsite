@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
 router.get("/savedWorkouts/ids", async (req, res) => {
   try {
     const user = await UserModel.findById(req.body.userID);
-    res.json({exercises: user.exercises});
+    res.json({ exercises: user.exercises });
   } catch (error) {
     res.json(error);
   }
@@ -28,22 +28,21 @@ router.get("/savedWorkouts", async (req, res) => {
   try {
     const user = await UserModel.findById(req.body.userID);
     const exercises = await workoutModel.find({
-      _id: {$in: user.exercises},
+      _id: { $in: user.exercises },
     });
-    res.json({exercises});
-
+    res.json({ exercises });
   } catch (error) {
     res.json(error);
   }
 });
 
-router.put("/", async (req, res) =>{
-  try{
+router.put("/", async (req, res) => {
+  try {
     const exercise = await workoutModel.findById(req.body.exerciseID);
     const user = await UserModel.findById(req.body.userID);
     user.exercises.push(exercise);
     await user.save();
-    res.json({exercises: user.exercises});
+    res.json({ exercises: user.exercises });
   } catch (error) {
     res.json(error);
   }
@@ -60,7 +59,8 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/create", async (req, res) => {
-  const { title, set, reps, level, equipment, targetMuscles } = req.body;
+  const { title, set, reps, level, equipment, targetMuscles, username } =
+    req.body;
   // //const exercise = await workoutModel.findOne({ title });
   // console.log(req.body);
   const exercise = new workoutModel({
@@ -70,6 +70,7 @@ router.post("/create", async (req, res) => {
     level: level,
     equipment: equipment,
     targetMuscles: targetMuscles,
+    username: username,
   });
 
   try {
