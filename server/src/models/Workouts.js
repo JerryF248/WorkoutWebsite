@@ -19,6 +19,7 @@ const exerciseSchema = new mongoose.Schema({
   level: { type: String, required: true },
   equipment: { type: String, required: true },
   targetMuscles: { type: String, required: true },
+  username: { type: String, required: true },
 });
 
 /* const workoutPlanSchema = mongoose.Schema({
